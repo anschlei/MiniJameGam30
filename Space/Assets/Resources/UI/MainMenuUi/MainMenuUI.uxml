@@ -1,7 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:GroupBox style="left: 30%; right: 30%; position: absolute; padding-bottom: 5px; margin-top: 6px; margin-bottom: 5px; padding-right: 4px; justify-content: space-around; align-items: stretch; align-self: auto; height: 344px; top: 50px; bottom: 30px;">
-        <ui:Button text="Play" parse-escape-sequences="true" display-tooltip-when-elided="true" />
-        <ui:Button text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" />
-        <ui:Button text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" />
-    </ui:GroupBox>
-</ui:UXML>
