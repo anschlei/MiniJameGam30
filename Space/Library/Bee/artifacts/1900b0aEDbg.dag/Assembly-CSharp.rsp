@@ -366,6 +366,7 @@
 "Assets/Scripts/Ship/ShipCargo.cs"
 "Assets/Scripts/Ship/ShipController.cs"
 "Assets/Scripts/Ship/ShipControllerValues.cs"
+"Assets/Scripts/TestScript.cs"
 "Assets/Scripts/WorldBuilder/WorldBuilderSystem.cs"
 "Assets/Scripts/WorldBuilder/WorldBuilderValues.cs"
 -langversion:9.0
