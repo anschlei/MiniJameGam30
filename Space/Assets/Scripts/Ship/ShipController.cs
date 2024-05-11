@@ -34,8 +34,15 @@ public class ShipController : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        _shipInReach = null;
-        _baseInReach = false;
+        if (other.tag == "Ship")
+        {
+            _shipInReach = null;
+        }
+
+        if (other.tag == "Base")
+        {
+            _baseInReach = false;
+        }
     }
 
     void Move()
