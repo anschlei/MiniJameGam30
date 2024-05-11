@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Label tabindex="-1" text="Warnings" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Warnings" style="position: relative; top: 0; left: 0; -unity-text-align: upper-center;" />
+    <ui:Label tabindex="-1" text="Hinweise etc was passiert Info" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Notifications" style="position: relative; top: auto; left: auto; height: 100px; width: auto; -unity-text-align: middle-center; white-space: nowrap; margin-top: 40px;" />
+    <ui:ProgressBar value="22" title="Available Oxygen" style="justify-content: center; align-self: center; height: 30px; width: 800px; align-items: stretch; bottom: auto; top: 55%; flex-direction: column; flex-wrap: nowrap; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; min-width: auto; min-height: auto; -unity-background-image-tint-color: rgb(74, 114, 241);" />
+    <ui:GroupBox style="position: absolute; height: 50px; width: 188px; top: 420px; left: 9px; flex-direction: row;">
+        <ui:Button text="Attach" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Scannen" style="position: relative; top: 0; left: 0; white-space: nowrap; -unity-text-align: middle-center;" />
+        <ui:Button text="Escape" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Scannen" style="position: relative; top: 0; left: 0; white-space: nowrap; -unity-text-align: middle-center;" />
+    </ui:GroupBox>
+    <ui:Button text="Scannen" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Scannen" style="position: absolute; top: 425px; left: 1058px; white-space: nowrap; -unity-text-align: middle-center;" />
+</ui:UXML>
