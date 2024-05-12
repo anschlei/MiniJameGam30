@@ -13,6 +13,8 @@ public class ShipCargo : MonoBehaviour
     }
 
     [SerializeField]
+    int _maxCargo;
+    [SerializeField]
     Cargo _cargo;
     [SerializeField]
     GameObject _interior;
@@ -22,6 +24,11 @@ public class ShipCargo : MonoBehaviour
     void Start()
     {
         _quarter = GetComponent<CrewQuarter>();
+    }
+
+    public int GetMaxCargo()
+    {
+        return _maxCargo;
     }
 
     public void Scan(ShipCargo otherShipCargo)
@@ -63,6 +70,7 @@ public class ShipCargo : MonoBehaviour
 
     public void Upgrade()
     {
+        _maxCargo += 2;
         Debug.Log("You upgraded your cargo and can hold more persons and/or materials!");
     }
 
