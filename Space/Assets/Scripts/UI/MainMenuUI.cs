@@ -12,7 +12,9 @@ public class MainMenuUI : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        //DEBUG::TEST
+        SceneManager.LoadScene(3, LoadSceneMode.Single);
+        //SceneManager.LoadScene(1, LoadSceneMode.Single);
         SceneManager.LoadScene(2, LoadSceneMode.Additive);
     }
 

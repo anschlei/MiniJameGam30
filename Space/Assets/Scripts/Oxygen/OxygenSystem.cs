@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class OxygenSystem : MonoBehaviour
@@ -22,11 +23,10 @@ public class OxygenSystem : MonoBehaviour
 
     public bool Consume(int _amountOfCrew = 1)
     {
-        var tmpOxygen = (int)(m_oxygen - (m_consumedPerCrew * _amountOfCrew));
-        
-        if(tmpOxygen > 0)
-        {
+        var tmpOxygen = (int)(m_oxygen) - (m_consumedPerCrew * _amountOfCrew);
 
+        if (tmpOxygen > 0)
+        {
             m_oxygen = tmpOxygen;
 
             float tmpMaxOxygen = (m_amountOfAirBoxes * m_amountOfBoxAir);
@@ -64,29 +64,48 @@ public class OxygenSystem : MonoBehaviour
 
     void RefillOxygen(float _air)
     {
-        var tmpMaxOxygen = (m_amountOfAirBoxes * m_amountOfBoxAir);
+        float tmpMaxOxygen = (m_amountOfAirBoxes * m_amountOfBoxAir);
 
-        var tmpNewOxygen = m_oxygen + _air;
+        float tmpNewOxygen = m_oxygen + _air;
 
-        m_oxygen = tmpNewOxygen > tmpMaxOxygen ? tmpMaxOxygen : tmpNewOxygen;
+        float delta = 1 - ( (tmpMaxOxygen - m_oxygen) / tmpMaxOxygen);
 
-        IncreaseBalloonOxygen(  ( tmpMaxOxygen / m_oxygen) );
-        if(tmpNewOxygen > tmpMaxOxygen)
+        if (tmpNewOxygen > tmpMaxOxygen)
         {
             m_oxygen = tmpMaxOxygen;
+            IncreaseBalloonOxygen(1);//%;
         }
         else
         {
             m_oxygen = tmpNewOxygen;
+            IncreaseBalloonOxygen( delta );
         }
+
+        float newOxygenWidth = m_oiriginOxygenSpriteWidth * delta;
+
+        // change color from state
+        if ((delta >= 0.5f && (m_oxygenState == (int)States.WARNING) || (delta > 0.1f) && m_oxygenState == (int)States.CRIT))
+        {
+            m_Oxygen.color = new Color(0.45f, 0.82f, 1.0f);
+            m_oxygenState = (int)States.OK;
+        }
+        else if (delta >= 0.1f && m_oxygenState == (int)States.CRIT)
+        {
+            m_Oxygen.color = new Color(0.8f, 0.81f, 0.29f);
+            m_oxygenState = (int)States.WARNING;
+        }
+
+        m_Oxygen.transform.localScale = new Vector2(newOxygenWidth, m_Oxygen.transform.localScale.y);
+
 
         Debug.Log("OxygenSystem::RefillOxygen::" + m_oxygen);
     }
 
     private void Start()
-    {
-        m_Oxygen =  GameObject.FindGameObjectWithTag("GameUI").transform.GetChild(0).GetChild(1).GetComponent<Image>();
-        if(m_Oxygen == null)
+    {        
+        m_Oxygen = GameObject.FindGameObjectWithTag("GameUI").transform.GetChild(0).GetChild(1).GetComponent<Image>();
+
+        if (m_Oxygen == null)
         {
             Debug.Log("Debug::Oxygen:: GameUI not found!");
         }
@@ -105,16 +124,25 @@ public class OxygenSystem : MonoBehaviour
     {
         foreach (GameObject ballon in m_Ballons)
         {
-            ballon.transform.GetChild(0).transform.localScale = new Vector3(20+(80*_percent), 20+(80 * _percent), 100);
+            if(ballon != null)
+            {
+                ballon.transform.GetChild(0).transform.localScale = new Vector3(20+(80*_percent), 20+(80 * _percent), 100);
+            }
         }
     }
 
     
     private void IncreaseBalloonOxygen(float _percent)
     {
-        foreach (GameObject ballon in m_Ballons)
+        if(_percent > 0)
         {
-            ballon.transform.GetChild(0).transform.localScale = new Vector3( 20 + (80 *  _percent), 20 + (80 * _percent) , 100 );
+            foreach (GameObject ballon in m_Ballons)
+            {
+                if(ballon != null)
+                {
+                    ballon.transform.GetChild(0).transform.localScale = new Vector3( transform.localScale.x + 100*_percent, transform.localScale.y + 100 * _percent , 100 );
+                }
+            }
         }
     }
 
@@ -138,7 +166,6 @@ public class OxygenSystem : MonoBehaviour
 
     [SerializeField]
     List<GameObject> m_Ballons = new List<GameObject> { null, null, null, null};
-
     Vector3 m_originalBalloonSize;
 
     enum States : int
@@ -163,7 +190,7 @@ public class OxygenSystem : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.X))
         {
             Debug.Log("Debug::Test::Presed-");
-            this.Consume();
+            this.Consume(10);
         }
     }
 
