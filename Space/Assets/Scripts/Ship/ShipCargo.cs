@@ -68,8 +68,9 @@ public class ShipCargo : MonoBehaviour
         _cargo.Material++;
     }
 
-    public void Upgrade()
+    public void Upgrade(int materialCosts)
     {
+        _cargo.Material -= materialCosts;
         _maxCargo += 2;
         Debug.Log("You upgraded your cargo and can hold more persons and/or materials!");
     }

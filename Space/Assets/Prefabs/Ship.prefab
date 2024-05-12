@@ -394,6 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c6944e3c9722247a56d2b16f4d973f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxCargo: 8
   _cargo:
     Persons: 0
     Material: 0
@@ -414,6 +415,8 @@ MonoBehaviour:
     type: 3}
   _cargo: {fileID: 8493184702697841429}
   _crewCooldown: 2
+  _OxygenSystem: {fileID: 0}
+  _amountEmployedCrew: 0
   _remainingCrewCooldown: 0
   _crew: []
   _availableCrew: []
@@ -457,6 +460,7 @@ MonoBehaviour:
   m_amountOfAirBoxes: 1
   m_amountOfBoxAir: 50
   m_Oxygen: {fileID: 0}
+  m_Ballons: []
 --- !u!1001 &4201054095536438107
 PrefabInstance:
   m_ObjectHideFlags: 0

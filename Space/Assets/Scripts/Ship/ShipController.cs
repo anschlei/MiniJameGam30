@@ -118,9 +118,10 @@ public class ShipController : MonoBehaviour
         {
             _cargo.UnloadPersons();
         }
-        if (Input.GetKeyDown(KeyCode.U) && _baseInReach)
+        if (Input.GetKeyDown(KeyCode.U) && _baseInReach && _cargo.GetCargo().Material >= 2 * ((_cargo.GetMaxCargo() + 2 - 8) / 2))
         {
-            _cargo.Upgrade();
+            _cargo.Upgrade(2 * ((_cargo.GetMaxCargo() + 2 - 8) / 2));
+            Debug.Log("Upgraded ship! You now need: " + 2 * ((_cargo.GetMaxCargo() + 2 - 8) / 2) + " materials to upgrade again.");
         }
 
         if(Input.GetKeyDown(KeyCode.I))
