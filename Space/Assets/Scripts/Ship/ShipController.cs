@@ -17,6 +17,9 @@ public class ShipController : MonoBehaviour
     [SerializeField]
     private GameObject _CommandbridgeRoof;
 
+    [SerializeField]
+    CrewQuarter _quarter;
+
 
     Vector3 velocity;
 
@@ -25,8 +28,6 @@ public class ShipController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Something is in range");
-
         if (other.tag == "Ship")
         {
             _shipInReach = other.GetComponent<ShipCargo>();
@@ -107,7 +108,7 @@ public class ShipController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && _shipInReach)
+        if (Input.GetKeyDown(KeyCode.E) && _shipInReach && (_shipInReach.GetCargo().Persons > 0 || _shipInReach.GetCargo().Material > 0))
         {
             _cargo.Scan(_shipInReach);
             _cargo.LootShip(_shipInReach);
@@ -131,6 +132,9 @@ public class ShipController : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		Move();
+        if (!_quarter.GetIsLoading())
+        {
+            Move();
+        }
 	}
 }

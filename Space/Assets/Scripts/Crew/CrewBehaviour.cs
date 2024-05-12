@@ -99,6 +99,8 @@ public class CrewBehaviour : MonoBehaviour
 
         Vector3 displacement = _velocity * Time.deltaTime;
 
+        transform.LookAt(_targetLocation);
+
         transform.position += displacement;
     }
 }
