@@ -6,7 +6,7 @@ using UnityEngine;
 public class ShipCargo : MonoBehaviour
 {
     [Serializable]
-    public struct Cargo
+    public class Cargo
     {
         public int Persons;
         public int Material;
@@ -16,6 +16,13 @@ public class ShipCargo : MonoBehaviour
     Cargo _cargo;
     [SerializeField]
     GameObject _interior;
+    
+    CrewQuarter _quarter;
+
+    void Start()
+    {
+        _quarter = GetComponent<CrewQuarter>();
+    }
 
     public void Scan(ShipCargo otherShipCargo)
     {
@@ -24,7 +31,9 @@ public class ShipCargo : MonoBehaviour
 
     public void LootShip(ShipCargo otherShipCargo)
     {
-        Cargo otherCargo = otherShipCargo.GetCargo();
+        _quarter.SendCrew(otherShipCargo);
+
+        /*Cargo otherCargo = otherShipCargo.GetCargo();
         Debug.Log("The other ship has: " + otherCargo.Persons + " persons and: " + otherCargo.Material + " materials on board!");
 
         _cargo.Persons += otherCargo.Persons;
@@ -33,13 +42,23 @@ public class ShipCargo : MonoBehaviour
         Debug.Log("You now have: " + _cargo.Persons + " persons and: " + _cargo.Material + " materials on board!");
 
         otherCargo.Persons = 0;
-        otherCargo.Material = 0;
+        otherCargo.Material = 0;*/
     }
 
     public void UnloadPersons()
     {
         Debug.Log("You unloaded " + _cargo.Persons + " persons at the base");
         _cargo.Persons = 0;
+    }
+
+    public void AddPerson()
+    {
+        _cargo.Persons++;
+    }
+
+    public void AddMaterial()
+    {
+        _cargo.Material++;
     }
 
     public void Upgrade()
