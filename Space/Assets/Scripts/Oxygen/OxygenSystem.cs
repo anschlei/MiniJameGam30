@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,11 +26,14 @@ public class OxygenSystem : MonoBehaviour
         
         if(tmpOxygen > 0)
         {
+
             m_oxygen = tmpOxygen;
 
             float tmpMaxOxygen = (m_amountOfAirBoxes * m_amountOfBoxAir);
             float delta = (m_oxygen) / tmpMaxOxygen;
             float newOxygenWidth = m_oiriginOxygenSpriteWidth * delta;
+
+            DecreaseBalloonOxygen(delta);
 
             // change color from state
             if ( (delta <= 0.5f && (m_oxygenState == (int)States.OK) || ( delta > 0.1f) && m_oxygenState == (int)States.CRIT)  )
@@ -66,6 +70,16 @@ public class OxygenSystem : MonoBehaviour
 
         m_oxygen = tmpNewOxygen > tmpMaxOxygen ? tmpMaxOxygen : tmpNewOxygen;
 
+        IncreaseBalloonOxygen(  ( tmpMaxOxygen / m_oxygen) );
+        if(tmpNewOxygen > tmpMaxOxygen)
+        {
+            m_oxygen = tmpMaxOxygen;
+        }
+        else
+        {
+            m_oxygen = tmpNewOxygen;
+        }
+
         Debug.Log("OxygenSystem::RefillOxygen::" + m_oxygen);
     }
 
@@ -81,6 +95,26 @@ public class OxygenSystem : MonoBehaviour
             m_oiriginOxygenSpriteWidth = m_Oxygen.transform.localScale.x;
             m_oxygen = (m_amountOfAirBoxes * m_amountOfBoxAir);
             m_oxygenState = (int)States.OK;
+            m_originalBalloonSize = m_Ballons.ElementAt(0).transform.localScale;
+        }
+    }
+
+    
+    // 80 == 100%
+    private void DecreaseBalloonOxygen(float _percent)
+    {
+        foreach (GameObject ballon in m_Ballons)
+        {
+            ballon.transform.GetChild(0).transform.localScale = new Vector3(20+(80*_percent), 20+(80 * _percent), 100);
+        }
+    }
+
+    
+    private void IncreaseBalloonOxygen(float _percent)
+    {
+        foreach (GameObject ballon in m_Ballons)
+        {
+            ballon.transform.GetChild(0).transform.localScale = new Vector3( 20 + (80 *  _percent), 20 + (80 * _percent) , 100 );
         }
     }
 
@@ -101,6 +135,11 @@ public class OxygenSystem : MonoBehaviour
     Image m_Oxygen = null;
     float m_oiriginOxygenSpriteWidth;
     int m_oxygenState;
+
+    [SerializeField]
+    List<GameObject> m_Ballons = new List<GameObject> { null, null, null, null};
+
+    Vector3 m_originalBalloonSize;
 
     enum States : int
     {

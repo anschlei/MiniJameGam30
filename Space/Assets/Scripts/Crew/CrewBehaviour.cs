@@ -8,6 +8,7 @@ public class CrewBehaviour : MonoBehaviour
     {
         Person = 0,
         Material = 1,
+        Balloon = 2,
         None = 10
     }
 
