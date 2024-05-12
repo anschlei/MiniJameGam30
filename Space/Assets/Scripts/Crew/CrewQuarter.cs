@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static ShipCargo;
 
 public class CrewQuarter : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class CrewQuarter : MonoBehaviour
 
     [SerializeField]
     float _crewCooldown;
+
+    [SerializeField]
+    OxygenSystem _OxygenSystem;
+
+    [SerializeField]
+    int _amountEmployedCrew;
 
     public float _remainingCrewCooldown;
 
@@ -25,10 +32,13 @@ public class CrewQuarter : MonoBehaviour
 
     void Start()
     {
+        _amountEmployedCrew = 3;
+
         _crew = new List<CrewBehaviour>();
         _availableCrew = new List<CrewBehaviour>();
+        _OxygenSystem = GetComponent<OxygenSystem>();
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < _amountEmployedCrew; i++)
         {
             GameObject crew = Instantiate(_crewPrefab, this.transform);
             CrewBehaviour behaviour = crew.GetComponent<CrewBehaviour>();
@@ -64,8 +74,17 @@ public class CrewQuarter : MonoBehaviour
         crew.transform.localPosition = new Vector3();
     }
 
+
+    float t = 1;
     void Update()
     {
+        t -= Time.deltaTime;
+        if (t <= 0f)
+        {
+            _OxygenSystem.Consume(_amountEmployedCrew + _cargo.GetCargo().Persons);
+            t = 1;
+        }
+
         if (_isLoading)
         {
             _remainingCrewCooldown -= Time.deltaTime;

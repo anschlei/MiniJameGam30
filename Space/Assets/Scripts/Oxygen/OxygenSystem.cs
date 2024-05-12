@@ -19,7 +19,7 @@ public class OxygenSystem : MonoBehaviour
         return m_oxygen;
     }
 
-    bool Consume(int _amountOfCrew = 1)
+    public bool Consume(int _amountOfCrew = 1)
     {
         var tmpOxygen = (int)(m_oxygen - (m_consumedPerCrew * _amountOfCrew));
         
@@ -49,6 +49,11 @@ public class OxygenSystem : MonoBehaviour
         }
         else
         {
+            if(m_Oxygen.transform.localScale.x != 0)
+            {
+                m_Oxygen.transform.localScale = new Vector2(0, m_Oxygen.transform.localScale.y);
+            }
+
             return false;
         }
     }
