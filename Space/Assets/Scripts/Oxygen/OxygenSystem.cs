@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OxygenSystem : MonoBehaviour
 {
@@ -18,13 +19,38 @@ public class OxygenSystem : MonoBehaviour
         return m_oxygen;
     }
 
-    // TODO -> get bool maybe =? ask for a bool
-    void Consume(int _amountOfCrew = 1)
+    bool Consume(int _amountOfCrew = 1)
     {
         var tmpOxygen = (int)(m_oxygen - (m_consumedPerCrew * _amountOfCrew));
-        m_oxygen = tmpOxygen < 0 ? 0 : tmpOxygen;
+        
+        if(tmpOxygen > 0)
+        {
+            m_oxygen = tmpOxygen;
 
-        Debug.Log("OxygenSystem::Consumed::" + m_oxygen);
+            float tmpMaxOxygen = (m_amountOfAirBoxes * m_amountOfBoxAir);
+            float delta = (m_oxygen) / tmpMaxOxygen;
+            float newOxygenWidth = m_oiriginOxygenSpriteWidth * delta;
+
+            // change color from state
+            if ( (delta <= 0.5f && (m_oxygenState == (int)States.OK) || ( delta > 0.1f) && m_oxygenState == (int)States.CRIT)  )
+            {
+                m_Oxygen.color = new Color(0.8f, 0.81f, 0.29f);
+                m_oxygenState = (int)States.WARNING;
+            }
+            else if( delta <= 0.1f && m_oxygenState == (int)States.WARNING)
+            {
+                m_Oxygen.color = new Color(0.48f, 0.10f, 0.04f);
+                m_oxygenState = (int)States.CRIT;
+            }
+            
+            m_Oxygen.transform.localScale = new Vector2(newOxygenWidth, m_Oxygen.transform.localScale.y);
+
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     void RefillOxygen(float _air)
@@ -38,7 +64,20 @@ public class OxygenSystem : MonoBehaviour
         Debug.Log("OxygenSystem::RefillOxygen::" + m_oxygen);
     }
 
-
+    private void Start()
+    {
+        m_Oxygen =  GameObject.FindGameObjectWithTag("GameUI").transform.GetChild(0).GetChild(1).GetComponent<Image>();
+        if(m_Oxygen == null)
+        {
+            Debug.Log("Debug::Oxygen:: GameUI not found!");
+        }
+        else
+        {
+            m_oiriginOxygenSpriteWidth = m_Oxygen.transform.localScale.x;
+            m_oxygen = (m_amountOfAirBoxes * m_amountOfBoxAir);
+            m_oxygenState = (int)States.OK;
+        }
+    }
 
 
     [SerializeField]
@@ -53,7 +92,19 @@ public class OxygenSystem : MonoBehaviour
     [SerializeField]
     float m_amountOfBoxAir;
 
+    [SerializeField]
+    Image m_Oxygen = null;
+    float m_oiriginOxygenSpriteWidth;
+    int m_oxygenState;
 
+    enum States : int
+    {
+        OK,
+        WARNING,
+        CRIT
+    }
+
+    
 
     //
     // DEBUG::TEST 
