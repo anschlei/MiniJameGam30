@@ -5,8 +5,8 @@ using UnityEngine;
 public class AudioSystem : MonoBehaviour
 {
 
-    [SerializeField]
-    private int m_volume = 50;
+    [SerializeField, Range(0.0f, 1.0f)]
+    private float m_volume = 1.0f;
 
     //
     // Sounds
@@ -31,16 +31,21 @@ public class AudioSystem : MonoBehaviour
     private AudioClip m_backgroundMusik = null;
 
 
-    public void SetVolume(int _volume)
+    public void SetVolume(float _volume)
     {
         m_volume = _volume;
+        m_objectSound.volume = m_volume;
+        m_backgroundAudioSource.volume = m_volume;
     }
 
     private void Awake()
     {
+        DontDestroyOnLoad(this);
+
         if(m_shipEngine != null)
         {
             m_objectSound = GetComponents<AudioSource>()[0];
+            m_objectSound.volume = m_volume;
             m_objectSound.clip = m_shipEngine;
             m_objectSound.Play();
         }
@@ -48,6 +53,7 @@ public class AudioSystem : MonoBehaviour
         if(m_signalSound != null)
         {
             m_backgroundAudioSource = GetComponents<AudioSource>()[1];
+            m_backgroundAudioSource.volume = m_volume;
             m_backgroundAudioSource.clip = m_signalSound;
             m_backgroundAudioSource.Play();
         }

@@ -89,7 +89,7 @@ public class CrewQuarter : MonoBehaviour
         {
             _remainingCrewCooldown -= Time.deltaTime;
 
-            if ((_targetCargo.Persons > 0 || _targetCargo.Material > 0) && _remainingCrewCooldown <= 0.0f && _availableCrew.Count > 0)
+            if (((_targetCargo.Persons > 0 && _cargo.GetCargo().Persons < _cargo.GetMaxCargo()) || (_targetCargo.Material > 0 && _cargo.GetCargo().Material < _cargo.GetMaxCargo())) && _remainingCrewCooldown <= 0.0f && _availableCrew.Count > 0)
             {
                 _remainingCrewCooldown = _crewCooldown;
 

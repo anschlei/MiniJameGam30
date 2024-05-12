@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
+    [SerializeField]
+    GameObject _settings;
+    [SerializeField]
+    GameObject _main;
+
     public void Play()
     {
         SceneManager.LoadScene(1, LoadSceneMode.Single);
@@ -13,11 +18,23 @@ public class MainMenuUI : MonoBehaviour
 
     public void Settings()
     {
-        // todo 
+        _settings.SetActive(true);
+        _main.SetActive(false);
     }
 
-    public void Creddits()
+    public void Credits()
     {
         // todo
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
+    public void Back()
+    {
+        _settings.SetActive(false);
+        _main.SetActive(true);
     }
 }
