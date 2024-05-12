@@ -366,7 +366,6 @@
 "Assets/Scripts/Ship/ShipCargo.cs"
 "Assets/Scripts/Ship/ShipController.cs"
 "Assets/Scripts/Ship/ShipControllerValues.cs"
-"Assets/Scripts/TestScript.cs"
 "Assets/Scripts/UI/GameUI.cs"
 "Assets/Scripts/UI/MainMenuUI.cs"
 "Assets/Scripts/WorldBuilder/WorldBuilderSystem.cs"

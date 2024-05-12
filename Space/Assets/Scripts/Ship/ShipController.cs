@@ -11,7 +11,14 @@ public class ShipController : MonoBehaviour
     [SerializeField]
     ShipCargo _shipInReach;
 
-	Vector3 velocity;
+    [SerializeField]
+    private GameObject _ShipRoof;
+
+    [SerializeField]
+    private GameObject _CommandbridgeRoof;
+
+
+    Vector3 velocity;
 
     [SerializeField]
     bool _baseInReach = false;
@@ -113,6 +120,12 @@ public class ShipController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U) && _baseInReach)
         {
             _cargo.Upgrade();
+        }
+
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            _ShipRoof.SetActive(!_ShipRoof.activeSelf);
+            _CommandbridgeRoof.SetActive(!_CommandbridgeRoof.activeSelf);
         }
     }
 
