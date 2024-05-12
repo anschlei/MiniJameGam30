@@ -9,6 +9,8 @@ public class MainMenuUI : MonoBehaviour
     GameObject _settings;
     [SerializeField]
     GameObject _main;
+    [SerializeField]
+    GameObject _controls;
 
     public void Play()
     {
@@ -24,7 +26,8 @@ public class MainMenuUI : MonoBehaviour
 
     public void Credits()
     {
-        // todo
+        _controls.SetActive(true);
+        _main.SetActive(false);
     }
 
     public void Exit()
@@ -32,9 +35,15 @@ public class MainMenuUI : MonoBehaviour
         Application.Quit();
     }
 
-    public void Back()
+    public void BackFromSettings()
     {
         _settings.SetActive(false);
+        _main.SetActive(true);
+    }
+
+    public void BackFromControls()
+    {
+        _controls.SetActive(false);
         _main.SetActive(true);
     }
 }

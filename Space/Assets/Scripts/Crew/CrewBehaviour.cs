@@ -17,7 +17,7 @@ public class CrewBehaviour : MonoBehaviour
     [SerializeField]
     float _maxAcceleration;
 
-    private bool _wasAtTarget = false;
+    public bool _wasAtTarget = false;
 
     CrewQuarter _homeQuarter;
     ShipCargo _cargo;
