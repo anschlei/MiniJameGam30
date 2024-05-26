@@ -23470,32 +23470,32 @@
       "DebugActionIndex": 458
     },
     {
-      "Annotation": "WriteText Library/Bee/artifacts/csharpactions/WebglExport.framework.js.gz_mh5v.info",
-      "DisplayName": "Writing WebglExport.framework.js.gz_mh5v.info",
+      "Annotation": "WriteText Library/Bee/artifacts/csharpactions/WebglExport.framework.js.unityweb_ihv7.info",
+      "DisplayName": "Writing WebglExport.framework.js.unityweb_ihv7.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 168218,
-      "PayloadLength": 484,
+      "PayloadOffset": 168224,
+      "PayloadLength": 490,
       "PayloadDebugContentSnippet": "{\"System.Object\":null,\"Bee.Tun",
       "Inputs": [],
       "Outputs": [
-        "Library/Bee/artifacts/csharpactions/WebglExport.framework.js.gz_mh5v.info"
+        "Library/Bee/artifacts/csharpactions/WebglExport.framework.js.unityweb_ihv7.info"
       ],
       "DebugActionIndex": 459
     },
     {
-      "Annotation": "GzipMarker F:/Git_Repositorys/MiniJameGame30/WebglExport/Build/WebglExport.framework.js.gz",
+      "Annotation": "GzipMarker F:/Git_Repositorys/MiniJameGame30/WebglExport/Build/WebglExport.framework.js.unityweb",
       "DisplayName": "GzipMarker WebglExport.framework.js",
-      "Action": "\"G:\\Unity\\Engine\\2022.3.28f1\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"G:\\Unity\\Engine\\2022.3.28f1\\Editor\\Data\\PlaybackEngines\\WebGLSupport\\WebGLPlayerBuildProgram.exe\" \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/Bee;G:/Unity/Engine/2022.3.28f1/Editor/Data/Tools/BuildPipeline\" invoke_static_method \"Library\\Bee\\artifacts\\csharpactions\\WebglExport.framework.js.gz_mh5v.info\"",
+      "Action": "\"G:\\Unity\\Engine\\2022.3.28f1\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"G:\\Unity\\Engine\\2022.3.28f1\\Editor\\Data\\PlaybackEngines\\WebGLSupport\\WebGLPlayerBuildProgram.exe\" \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/Bee;G:/Unity/Engine/2022.3.28f1/Editor/Data/Tools/BuildPipeline\" invoke_static_method \"Library\\Bee\\artifacts\\csharpactions\\WebglExport.framework.js.unityweb_ihv7.info\"",
       "Inputs": [
         "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.framework.js.unmarked",
-        "Library/Bee/artifacts/csharpactions/WebglExport.framework.js.gz_mh5v.info",
+        "Library/Bee/artifacts/csharpactions/WebglExport.framework.js.unityweb_ihv7.info",
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/modules.asset",
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.dll",
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe"
       ],
       "Outputs": [
-        "F:/Git_Repositorys/MiniJameGame30/WebglExport/Build/WebglExport.framework.js.gz"
+        "F:/Git_Repositorys/MiniJameGame30/WebglExport/Build/WebglExport.framework.js.unityweb"
       ],
       "ToBuildDependencies": [
         458,
@@ -23526,32 +23526,32 @@
       "DebugActionIndex": 461
     },
     {
-      "Annotation": "WriteText Library/Bee/artifacts/csharpactions/WebglExport.wasm.gz_z7w2.info",
-      "DisplayName": "Writing WebglExport.wasm.gz_z7w2.info",
+      "Annotation": "WriteText Library/Bee/artifacts/csharpactions/WebglExport.wasm.unityweb_nt8k.info",
+      "DisplayName": "Writing WebglExport.wasm.unityweb_nt8k.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 168799,
-      "PayloadLength": 468,
+      "PayloadOffset": 168817,
+      "PayloadLength": 474,
       "PayloadDebugContentSnippet": "{\"System.Object\":null,\"Bee.Tun",
       "Inputs": [],
       "Outputs": [
-        "Library/Bee/artifacts/csharpactions/WebglExport.wasm.gz_z7w2.info"
+        "Library/Bee/artifacts/csharpactions/WebglExport.wasm.unityweb_nt8k.info"
       ],
       "DebugActionIndex": 462
     },
     {
-      "Annotation": "GzipMarker F:/Git_Repositorys/MiniJameGame30/WebglExport/Build/WebglExport.wasm.gz",
+      "Annotation": "GzipMarker F:/Git_Repositorys/MiniJameGame30/WebglExport/Build/WebglExport.wasm.unityweb",
       "DisplayName": "GzipMarker WebglExport.wasm",
-      "Action": "\"G:\\Unity\\Engine\\2022.3.28f1\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"G:\\Unity\\Engine\\2022.3.28f1\\Editor\\Data\\PlaybackEngines\\WebGLSupport\\WebGLPlayerBuildProgram.exe\" \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/Bee;G:/Unity/Engine/2022.3.28f1/Editor/Data/Tools/BuildPipeline\" invoke_static_method \"Library\\Bee\\artifacts\\csharpactions\\WebglExport.wasm.gz_z7w2.info\"",
+      "Action": "\"G:\\Unity\\Engine\\2022.3.28f1\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"G:\\Unity\\Engine\\2022.3.28f1\\Editor\\Data\\PlaybackEngines\\WebGLSupport\\WebGLPlayerBuildProgram.exe\" \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/Bee;G:/Unity/Engine/2022.3.28f1/Editor/Data/Tools/BuildPipeline\" invoke_static_method \"Library\\Bee\\artifacts\\csharpactions\\WebglExport.wasm.unityweb_nt8k.info\"",
       "Inputs": [
         "Library/Bee/artifacts/WebGL/build/debug_WebGL_wasm/build.wasm.unmarked",
-        "Library/Bee/artifacts/csharpactions/WebglExport.wasm.gz_z7w2.info",
+        "Library/Bee/artifacts/csharpactions/WebglExport.wasm.unityweb_nt8k.info",
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/modules.asset",
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.dll",
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe"
       ],
       "Outputs": [
-        "F:/Git_Repositorys/MiniJameGame30/WebglExport/Build/WebglExport.wasm.gz"
+        "F:/Git_Repositorys/MiniJameGame30/WebglExport/Build/WebglExport.wasm.unityweb"
       ],
       "ToBuildDependencies": [
         461,
@@ -23596,7 +23596,7 @@
       "Annotation": "WriteText Library/Bee/artifacts/csharpactions/webgl.data_qnm2.info",
       "DisplayName": "Writing webgl.data_qnm2.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 169355,
+      "PayloadOffset": 169379,
       "PayloadLength": 1957,
       "PayloadDebugContentSnippet": "{\"System.Collections.Generic.D",
       "Inputs": [],
@@ -23657,32 +23657,32 @@
       "DebugActionIndex": 468
     },
     {
-      "Annotation": "WriteText Library/Bee/artifacts/csharpactions/WebglExport.data.gz_h2if.info",
-      "DisplayName": "Writing WebglExport.data.gz_h2if.info",
+      "Annotation": "WriteText Library/Bee/artifacts/csharpactions/WebglExport.data.unityweb_hp74.info",
+      "DisplayName": "Writing WebglExport.data.unityweb_hp74.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 171409,
-      "PayloadLength": 445,
+      "PayloadOffset": 171439,
+      "PayloadLength": 451,
       "PayloadDebugContentSnippet": "{\"System.Object\":null,\"Bee.Tun",
       "Inputs": [],
       "Outputs": [
-        "Library/Bee/artifacts/csharpactions/WebglExport.data.gz_h2if.info"
+        "Library/Bee/artifacts/csharpactions/WebglExport.data.unityweb_hp74.info"
       ],
       "DebugActionIndex": 469
     },
     {
-      "Annotation": "GzipMarker F:/Git_Repositorys/MiniJameGame30/WebglExport/Build/WebglExport.data.gz",
+      "Annotation": "GzipMarker F:/Git_Repositorys/MiniJameGame30/WebglExport/Build/WebglExport.data.unityweb",
       "DisplayName": "GzipMarker WebglExport.data",
-      "Action": "\"G:\\Unity\\Engine\\2022.3.28f1\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"G:\\Unity\\Engine\\2022.3.28f1\\Editor\\Data\\PlaybackEngines\\WebGLSupport\\WebGLPlayerBuildProgram.exe\" \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/Bee;G:/Unity/Engine/2022.3.28f1/Editor/Data/Tools/BuildPipeline\" invoke_static_method \"Library\\Bee\\artifacts\\csharpactions\\WebglExport.data.gz_h2if.info\"",
+      "Action": "\"G:\\Unity\\Engine\\2022.3.28f1\\Editor\\Data\\Tools\\netcorerun\\netcorerun.exe\" \"G:\\Unity\\Engine\\2022.3.28f1\\Editor\\Data\\PlaybackEngines\\WebGLSupport\\WebGLPlayerBuildProgram.exe\" \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/Bee;G:/Unity/Engine/2022.3.28f1/Editor/Data/Tools/BuildPipeline\" invoke_static_method \"Library\\Bee\\artifacts\\csharpactions\\WebglExport.data.unityweb_hp74.info\"",
       "Inputs": [
         "Library/Bee/artifacts/WebGL/webgl.data.unmarked",
-        "Library/Bee/artifacts/csharpactions/WebglExport.data.gz_h2if.info",
+        "Library/Bee/artifacts/csharpactions/WebglExport.data.unityweb_hp74.info",
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/modules.asset",
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll",
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.Data.dll",
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/WebGLPlayerBuildProgram.exe"
       ],
       "Outputs": [
-        "F:/Git_Repositorys/MiniJameGame30/WebglExport/Build/WebglExport.data.gz"
+        "F:/Git_Repositorys/MiniJameGame30/WebglExport/Build/WebglExport.data.unityweb"
       ],
       "ToBuildDependencies": [
         468,
@@ -23696,7 +23696,7 @@
     {
       "Annotation": "PreprocessJS Library/Bee/artifacts/WebGLWebglExport.loader.js",
       "DisplayName": "PreprocessJS WebGLWebglExport.loader",
-      "Action": "cd /d \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='UnityLoader/UnityLoader.js'\"  \"locals.outputPath='F\\x3a/Git\\x5fRepositorys/MiniJameGame30/Space/Library/Bee/artifacts/WebGLWebglExport.loader.js'\"  \"locals.webglIncludes='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/WebGLIncludes'\"  \"locals.minifyOutput=true\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Space'\" \"PRODUCT_VERSION='0.1.0'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='WebglExport.data.gz'\" \"FRAMEWORK_FILENAME='WebglExport.framework.js.gz'\" \"WORKER_FILENAME=''\" \"CODE_FILENAME='WebglExport.wasm.gz'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2022.3.28f1'\" \"SHOW_DIAGNOSTICS=false\" \"CLOSE_ON_QUIT=false\"",
+      "Action": "cd /d \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='UnityLoader/UnityLoader.js'\"  \"locals.outputPath='F\\x3a/Git\\x5fRepositorys/MiniJameGame30/Space/Library/Bee/artifacts/WebGLWebglExport.loader.js'\"  \"locals.webglIncludes='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/WebGLIncludes'\"  \"locals.minifyOutput=true\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Space'\" \"PRODUCT_VERSION='0.1.0'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='WebglExport.data.unityweb'\" \"FRAMEWORK_FILENAME='WebglExport.framework.js.unityweb'\" \"WORKER_FILENAME=''\" \"CODE_FILENAME='WebglExport.wasm.unityweb'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK='Gzip'\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2022.3.28f1'\" \"SHOW_DIAGNOSTICS=false\" \"CLOSE_ON_QUIT=false\"",
       "Inputs": [
         "UnityLoader/UnityLoader.js"
       ],
@@ -23725,7 +23725,7 @@
     {
       "Annotation": "PreprocessJS F:/Git_Repositorys/MiniJameGame30/WebglExport/index.html",
       "DisplayName": "PreprocessJS index",
-      "Action": "cd /d \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/index.html'\"  \"locals.outputPath='F\\x3a/Git\\x5fRepositorys/MiniJameGame30/WebglExport/index.html'\"  \"locals.webglIncludes='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/WebGLIncludes'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Space'\" \"PRODUCT_VERSION='0.1.0'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='WebglExport.data.gz'\" \"FRAMEWORK_FILENAME='WebglExport.framework.js.gz'\" \"WORKER_FILENAME=''\" \"CODE_FILENAME='WebglExport.wasm.gz'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2022.3.28f1'\" \"SHOW_DIAGNOSTICS=false\" \"CLOSE_ON_QUIT=false\" \"LOADER_FILENAME='WebglExport.loader.js'\"",
+      "Action": "cd /d \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/index.html'\"  \"locals.outputPath='F\\x3a/Git\\x5fRepositorys/MiniJameGame30/WebglExport/index.html'\"  \"locals.webglIncludes='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/WebGLIncludes'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Space'\" \"PRODUCT_VERSION='0.1.0'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='WebglExport.data.unityweb'\" \"FRAMEWORK_FILENAME='WebglExport.framework.js.unityweb'\" \"WORKER_FILENAME=''\" \"CODE_FILENAME='WebglExport.wasm.unityweb'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK='Gzip'\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2022.3.28f1'\" \"SHOW_DIAGNOSTICS=false\" \"CLOSE_ON_QUIT=false\" \"LOADER_FILENAME='WebglExport.loader.js'\"",
       "Inputs": [
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/index.html"
       ],
@@ -23823,7 +23823,7 @@
     {
       "Annotation": "PreprocessJS F:/Git_Repositorys/MiniJameGame30/WebglExport/TemplateData/style.css",
       "DisplayName": "PreprocessJS style",
-      "Action": "cd /d \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/TemplateData/style.css'\"  \"locals.outputPath='F\\x3a/Git\\x5fRepositorys/MiniJameGame30/WebglExport/TemplateData/style.css'\"  \"locals.webglIncludes='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/WebGLIncludes'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Space'\" \"PRODUCT_VERSION='0.1.0'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='WebglExport.data.gz'\" \"FRAMEWORK_FILENAME='WebglExport.framework.js.gz'\" \"WORKER_FILENAME=''\" \"CODE_FILENAME='WebglExport.wasm.gz'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK=''\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2022.3.28f1'\" \"SHOW_DIAGNOSTICS=false\" \"CLOSE_ON_QUIT=false\" \"LOADER_FILENAME='WebglExport.loader.js'\"",
+      "Action": "cd /d \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools\" && \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Emscripten/node/node.exe\" \"G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/Preprocess.js\"  \"locals.cwd='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools'\"  \"locals.inputPath='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/TemplateData/style.css'\"  \"locals.outputPath='F\\x3a/Git\\x5fRepositorys/MiniJameGame30/WebglExport/TemplateData/style.css'\"  \"locals.webglIncludes='G\\x3a/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/WebGLIncludes'\"  \"locals.minifyOutput=false\"  \"COMPANY_NAME='DefaultCompany'\" \"PRODUCT_NAME='Space'\" \"PRODUCT_VERSION='0.1.0'\" \"WIDTH=960\" \"HEIGHT=600\" \"SPLASH_SCREEN_STYLE='Dark'\" \"BACKGROUND_COLOR='\\x23231F20'\" \"DATA_FILENAME='WebglExport.data.unityweb'\" \"FRAMEWORK_FILENAME='WebglExport.framework.js.unityweb'\" \"WORKER_FILENAME=''\" \"CODE_FILENAME='WebglExport.wasm.unityweb'\" \"MEMORY_FILENAME=''\" \"SYMBOLS_FILENAME=''\" \"BACKGROUND_FILENAME=''\" \"USE_WASM=true\" \"USE_THREADS=false\" \"USE_WEBGL_1_0=false\" \"USE_WEBGL_2_0=true\" \"WEBGL_POWER_PREFERENCE=2\" \"USE_DATA_CACHING=true\" \"DECOMPRESSION_FALLBACK='Gzip'\" \"DEVELOPMENT_PLAYER=false\" \"UNITY_VERSION='2022.3.28f1'\" \"SHOW_DIAGNOSTICS=false\" \"CLOSE_ON_QUIT=false\" \"LOADER_FILENAME='WebglExport.loader.js'\"",
       "Inputs": [
         "G:/Unity/Engine/2022.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/WebGLTemplates/Default/TemplateData/style.css"
       ],
