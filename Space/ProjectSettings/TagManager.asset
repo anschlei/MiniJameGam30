@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - GameUI
+  - Ship
+  - Base
+  - Loot
   layers:
   - Default
   - TransparentFX

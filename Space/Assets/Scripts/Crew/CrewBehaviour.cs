@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CrewBehaviour : MonoBehaviour
@@ -76,6 +77,11 @@ public class CrewBehaviour : MonoBehaviour
             _cargo.AddPerson();
             _homeQuarter.AddAvailableCrewMember(this);
             _currentLoot = Loot.None;
+            GameObject.FindGameObjectWithTag("Loot").GetComponent<TMP_Text>().text = $"{_cargo.GetCargo().Persons}/{_cargo.GetMaxCargo()}\n{_cargo.GetCargo().Material}/{_cargo.GetMaxCargo()}";
+
+            GameObject.FindGameObjectWithTag("Player").GetComponent<OxygenSystem>().RefillOxygen(2);
+
+            AudioSystem.rescuedPersons++;
         }
 
         if (_currentLoot == Loot.Material)
@@ -83,6 +89,9 @@ public class CrewBehaviour : MonoBehaviour
             _cargo.AddMaterial();
             _homeQuarter.AddAvailableCrewMember(this);
             _currentLoot = Loot.None;
+            GameObject.FindGameObjectWithTag("Loot").GetComponent<TMP_Text>().text = $"{_cargo.GetCargo().Persons}/{_cargo.GetMaxCargo()}\n{_cargo.GetCargo().Material}/{_cargo.GetMaxCargo()}";
+
+            GameObject.FindGameObjectWithTag("Player").GetComponent<OxygenSystem>().RefillOxygen(2);
         }
     }
 

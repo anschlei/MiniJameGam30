@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using static System.Collections.Specialized.BitVector32;
 
 public class ShipController : MonoBehaviour
 {
@@ -20,11 +22,16 @@ public class ShipController : MonoBehaviour
     [SerializeField]
     CrewQuarter _quarter;
 
-
     Vector3 velocity;
 
     [SerializeField]
     bool _baseInReach = false;
+
+    GameObject _notificationUI;
+    private void Start()
+    {
+        _notificationUI = GameObject.FindGameObjectWithTag("GameUI").transform.GetChild(0).GetChild(2).gameObject;
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -32,11 +39,16 @@ public class ShipController : MonoBehaviour
         {
             _shipInReach = other.GetComponent<ShipCargo>();
             Debug.Log("Other ship is in reach!");
+            _notificationUI.SetActive(true);
+            _notificationUI.transform.GetChild(0).GetComponent<TMP_Text>().text = "Reached another ship! Press E to collect their cargo.";
         }
 
         if (other.tag == "Base")
         {
             _baseInReach = true;
+
+            _notificationUI.SetActive(true);
+            _notificationUI.transform.GetChild(0).GetComponent<TMP_Text>().text = "Reached the station.Press E to unload the passengers. Press U to upgrade your ship.";
         }
     }
 
@@ -50,6 +62,7 @@ public class ShipController : MonoBehaviour
         if (other.tag == "Base")
         {
             _baseInReach = false;
+            _notificationUI.SetActive(false);
         }
     }
 
@@ -112,16 +125,20 @@ public class ShipController : MonoBehaviour
         {
             _cargo.Scan(_shipInReach);
             _cargo.LootShip(_shipInReach);
+
+            _notificationUI.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.E) && _baseInReach)
         {
             _cargo.UnloadPersons();
+            GameObject.FindGameObjectWithTag("Loot").GetComponent<TMP_Text>().text = $"{_cargo.GetCargo().Persons}/{_cargo.GetMaxCargo()}\n{_cargo.GetCargo().Material}/{_cargo.GetMaxCargo()}";
         }
         if (Input.GetKeyDown(KeyCode.U) && _baseInReach && _cargo.GetCargo().Material >= 2 * ((_cargo.GetMaxCargo() + 2 - 8) / 2))
         {
             _cargo.Upgrade(2 * ((_cargo.GetMaxCargo() + 2 - 8) / 2));
             Debug.Log("Upgraded ship! You now need: " + 2 * ((_cargo.GetMaxCargo() + 2 - 8) / 2) + " materials to upgrade again.");
+            GameObject.FindGameObjectWithTag("Loot").GetComponent<TMP_Text>().text = $"{_cargo.GetCargo().Persons}/{_cargo.GetMaxCargo()}\n{_cargo.GetCargo().Material}/{_cargo.GetMaxCargo()}";
         }
 
         if(Input.GetKeyDown(KeyCode.I))

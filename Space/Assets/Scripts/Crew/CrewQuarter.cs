@@ -116,6 +116,8 @@ public class CrewQuarter : MonoBehaviour
                     //set to false once all crew members are back
                     _isLoading = false;
                     _availableCrew.Clear();
+
+                    Destroy(_targetShip.gameObject);
                 }
             }
         }

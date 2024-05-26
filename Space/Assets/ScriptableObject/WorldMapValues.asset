@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5738c198339608446ad0ec0a75b82dad, type: 3}
   m_Name: WorldMapValues
   m_EditorClassIdentifier: 
-  minDistanceShipToShip: 200
-  baseArea: 200
-  worldMapArea: 2000
-  amountOfAvailableEscapeShips: 100
+  minDistanceShipToShip: 50
+  baseArea: 50
+  worldMapArea: 500
+  amountOfAvailableEscapeShips: 50

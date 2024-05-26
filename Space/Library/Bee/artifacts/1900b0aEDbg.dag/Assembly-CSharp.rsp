@@ -364,6 +364,7 @@
 -analyzer:"G:/Unity/Engine/2022.3.28f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Crew/CrewBehaviour.cs"
 "Assets/Scripts/Crew/CrewQuarter.cs"
+"Assets/Scripts/Gameover.cs"
 "Assets/Scripts/Oxygen/OxygenSystem.cs"
 "Assets/Scripts/Settings/AudioSystem.cs"
 "Assets/Scripts/Ship/ShipCargo.cs"

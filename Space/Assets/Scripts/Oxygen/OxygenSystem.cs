@@ -57,12 +57,13 @@ public class OxygenSystem : MonoBehaviour
             {
                 m_Oxygen.transform.localScale = new Vector2(0, m_Oxygen.transform.localScale.y);
             }
-
+            SceneManager.LoadScene(4, LoadSceneMode.Single);
+            
             return false;
         }
     }
 
-    void RefillOxygen(float _air)
+    public void RefillOxygen(float _air)
     {
         float tmpMaxOxygen = (m_amountOfAirBoxes * m_amountOfBoxAir);
 

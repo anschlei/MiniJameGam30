@@ -8,6 +8,9 @@ public class AudioSystem : MonoBehaviour
     [SerializeField, Range(0.0f, 1.0f)]
     private float m_volume = 1.0f;
 
+    //HACKY
+    public static int rescuedPersons = 0;
+
     //
     // Sounds
     // 
@@ -42,19 +45,19 @@ public class AudioSystem : MonoBehaviour
     {
         DontDestroyOnLoad(this);
 
-        if(m_shipEngine != null)
-        {
-            m_objectSound = GetComponents<AudioSource>()[0];
-            m_objectSound.volume = m_volume;
-            m_objectSound.clip = m_shipEngine;
-            m_objectSound.Play();
-        }
+        //if(m_shipEngine != null)
+        //{
+        //    m_objectSound = GetComponents<AudioSource>()[0];
+        //    m_objectSound.volume = m_volume;
+        //    m_objectSound.clip = m_shipEngine;
+        //    m_objectSound.Play();
+        //}
 
-        if(m_signalSound != null)
+        if(m_backgroundMusik != null)
         {
             m_backgroundAudioSource = GetComponents<AudioSource>()[1];
             m_backgroundAudioSource.volume = m_volume;
-            m_backgroundAudioSource.clip = m_signalSound;
+            m_backgroundAudioSource.clip = m_backgroundMusik;
             m_backgroundAudioSource.Play();
         }
     }

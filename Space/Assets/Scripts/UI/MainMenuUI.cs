@@ -15,8 +15,8 @@ public class MainMenuUI : MonoBehaviour
     public void Play()
     {
         //DEBUG::TEST
-        SceneManager.LoadScene(3, LoadSceneMode.Single);
-        //SceneManager.LoadScene(1, LoadSceneMode.Single);
+        //SceneManager.LoadScene(3, LoadSceneMode.Single);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
         SceneManager.LoadScene(2, LoadSceneMode.Additive);
     }
 
