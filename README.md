@@ -15,3 +15,4 @@ Movement
 - A: Left
 - D: Right
 - E: Interaction
+- U: Upgrade Cargo
